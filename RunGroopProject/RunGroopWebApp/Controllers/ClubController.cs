@@ -18,6 +18,12 @@ namespace RunGroopWebApp.Controllers
             _photoService = photoService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            IEnumerable<Club> clubs = await _clubRepository.GetAll();
+            return View(clubs);
+        }
+
         [HttpGet]
         [Route("RunningClubs")]
         public async Task<IActionResult> Index(int category = -1, int page = 1, int pageSize = 6)

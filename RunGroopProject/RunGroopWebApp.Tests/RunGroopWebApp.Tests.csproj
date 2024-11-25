@@ -22,4 +22,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RunGroopWebApp\RunGroopWebApp.csproj" />
+  </ItemGroup>
+
 </Project>

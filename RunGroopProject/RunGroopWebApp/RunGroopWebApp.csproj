@@ -17,8 +17,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../RunGroopWebApp.Tests/RunGroopWebApp.Tests.csproj" />
-  </ItemGroup>
-
 </Project>
