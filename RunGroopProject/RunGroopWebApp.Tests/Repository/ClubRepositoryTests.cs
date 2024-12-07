@@ -18,7 +18,7 @@ namespace RunGroopWebApp.Tests.Repository
             var databaseContext = new ApplicationDbContext(options);
             databaseContext.Database.EnsureCreated();
 
-            if (await databaseContext.Clubs.CountAsync() <= 0)
+            if (!await databaseContext.Clubs.AnyAsync())
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -46,7 +46,7 @@ namespace RunGroopWebApp.Tests.Repository
         }
 
         [Fact]
-        public async void ClubRepository_Add_ReturnsBool()
+        public async Task ClubRepository_Add_ReturnsBool()
         {
             //Arrange
             var club = new Club()
